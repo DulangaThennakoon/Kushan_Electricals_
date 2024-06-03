@@ -1,0 +1,13 @@
+.currentMail{
+    display: flex;
+    margin: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.verifyBTN,.changePwdBtn{
+    display: flex;
+    width: 60%;
+    justify-content: right;
+}

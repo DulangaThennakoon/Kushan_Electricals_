@@ -1,0 +1,47 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: fixed;
+    top: 50%; 
+    left: 0;
+    transform: translateY(-50%); 
+    border : 1px solid #000000;
+    border-radius: 25px;
+    padding: 5px;
+    margin-left: 5px;
+    z-index: 500;
+    background-color: #000000;
+    
+}
+
+.filter-btn-icon{
+    color: rgb(216, 213, 213);
+}
+
+.filter-btn-icon:hover{
+    color: #ff0000;
+}
+.filter-header{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    gap : 1rem;
+}
+.filter-header-icon{
+    margin-bottom: 5px;
+}
+.price-slider{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+.price-range{
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+.reset-price-btn{
+    align-self: center;
+}

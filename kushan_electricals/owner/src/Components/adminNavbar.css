@@ -1,0 +1,23 @@
+.custom-navbar {
+    background-color: #000000; /* Replace #ff0000 with your desired color */
+    width: 100%;
+  }
+  .pagelink {
+    color: #f2f2f2 !important;
+  }
+  #basic-nav-dropdown {
+    color: #f2f2f2 !important;
+  }
+.pi pi-user{
+    color: #f2f2f2 !important;
+}
+.businessAccount{
+    color: #f2f2f2;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+.user{
+    padding-right: 20px;
+}

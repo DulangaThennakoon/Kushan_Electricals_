@@ -1,0 +1,105 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.d-block{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* Adjust the aspect ratio of the carousel items */
+.carousel-item {
+  }
+  
+  /* Ensure images within carousel items fill the entire space */
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fills the entire space */
+  }
+  
+
+  .control-next {
+    height: 50% !important;
+    top: 25% !important;
+
+  }
+
+  .control-prev {
+    height: 50% !important;
+    top: 25% !important;
+  }
+@media (max-width: 767px) {
+    .productCarousel {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .productCarousel {
+        width: 60%;
+    }
+    .brand-category-div{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+  .productCarouselCol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .selected{
+    border-radius: 8px;
+  }
+  .animated{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3rem;
+  }
+  .productNameDiv{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    
+  }
+  .productBrandDiv{
+    display: flex;
+    gap:1rem;
+  }
+  .productCategoryDiv{
+    display: flex;
+    gap:1rem;
+  }
+  .dot{
+    background-color: rgb(68, 68, 68);
+  }
+  .quantityInput{
+    width: 25%;
+  }
+  .productQuantityDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .changeQTY{
+    font-size: 36px;
+    cursor: pointer;
+  }
+  .changeQTY:active{
+    transform: scale(0.9);
+    color: #ff0000;
+  }
+  .attributeLabel{
+    font-size: 16px;
+    font-weight: bold;
+  }

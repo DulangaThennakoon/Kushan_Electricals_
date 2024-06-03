@@ -1,0 +1,17 @@
+.salesGraphDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.reportButtonDiv {
+  display: flex;
+  justify-content: right;
+  margin-top: 1rem;
+}

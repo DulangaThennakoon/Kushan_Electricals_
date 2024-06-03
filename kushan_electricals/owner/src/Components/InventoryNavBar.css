@@ -1,0 +1,6 @@
+.rotate-180 {
+    transform: rotate(180deg)!important;
+  }
+  #optionList{
+    padding-right: 5px!important;
+  }

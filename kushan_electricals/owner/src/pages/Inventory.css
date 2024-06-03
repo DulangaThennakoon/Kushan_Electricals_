@@ -1,0 +1,26 @@
+.two-line-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:'black';
+    font-size: 13px!important;
+    font-weight: bolder!important;
+    margin-top: -6px!important;
+  }
+  .productGrid { 
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    width: 95%;
+}
+.cardDetails{
+  background-color: #e8e8e8;
+}
+.cardPrice{
+  font-size: 12px!important;
+}

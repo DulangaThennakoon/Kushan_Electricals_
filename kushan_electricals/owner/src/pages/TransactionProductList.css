@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    display: flex;
+    margin-left: 5%;
+    flex-wrap: wrap;
+    justify-content: left!important;
+    gap: 12px;
+    margin-top: 30px;
+    padding: 10px 20px ;
+}
+
+.container .box {
+    width: 12%;
+    height: 250px;
+    overflow: hidden;
+    margin-top: -20px;
+    background: #e8e8e8;
+    padding: 0 1% 1% 1%;
+    border-radius: 10px;
+}
+
+.container .box .contant {
+    align-items: center;
+}
+
+.container .box .contant .img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-box {
+    padding-top: 0!important;
+    height: 130px!important;
+    margin-left: -9px;
+    margin-right: -17px;
+    border-radius: 10px;
+}
+
+.detail {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.contant{
+    width:100px;
+    height:150px ;
+}
+.box{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    height: 180px!important;
+    font-size: 14px;
+}
+.productPrice{
+    margin-top: -10px;
+}
+.searchForm{
+    margin-left: 0.3rem;
+     z-index: 905;
+     margin-top:-7.5rem; 
+}
+.popup{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px;
+    z-Index: 999;
+}
+.transactionFooter{
+    position: fixed;
+    top: 77%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-Index: 1000;
+    max-Width: 32%;
+    margin-left: auto;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 0!important;
+    border-top-right-radius: 0!important;
+}
+.totalPriceBox{
+    background-color: #B7B7B7;
+    margin-left: auto;
+    margin-right: 1rem;
+    width: 40%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+}

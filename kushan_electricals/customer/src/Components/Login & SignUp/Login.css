@@ -1,0 +1,75 @@
+.loginInput{
+    width: 100px!important;
+
+}
+#loginPage{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#formControlLg{
+    width: 100%!important;
+}
+.loginFormDiv{
+    width: 80%;
+}
+.loginColumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#signInBtn{
+    background-color: black;
+    color: snow;
+}
+#loginHeader h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem!important;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+#signupHeader h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem!important;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.signupFormDiv{
+    width: 80%;
+}
+.signupColumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#signupPage{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#signupBtn{
+    background-color: black;
+    color: snow;
+}
+.userNameDiv{
+    display: flex;
+    justify-content:space-between;
+    gap: 1rem; 
+}
+.userPasswordDiv{
+    display: flex;
+    justify-content:space-between;
+    gap: 1rem; 
+}
+.showPasswordIcon{
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-100%);
+}
