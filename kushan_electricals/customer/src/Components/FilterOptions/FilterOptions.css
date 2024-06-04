@@ -1,47 +1,75 @@
 .filter {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     position: fixed;
-    top: 50%; 
+    top: 50%;
     left: 0;
-    transform: translateY(-50%); 
-    border : 1px solid #000000;
+    transform: translateY(-50%);
+    border: 1px solid #3769b2; /* Light Blue border */
     border-radius: 25px;
-    padding: 5px;
+    padding: 10px; /* Increased padding for better touch area */
     margin-left: 5px;
     z-index: 500;
-    background-color: #000000;
-    
+    background-color: #001226; /* Dark Blue background */
 }
 
-.filter-btn-icon{
-    color: rgb(216, 213, 213);
+.filter-btn-icon {
+    color: #eab541; /* Golden Yellow icon color */
+    font-size: 24px; /* Increased icon size for better visibility */
 }
 
-.filter-btn-icon:hover{
-    color: #ff0000;
+.filter-btn-icon:hover {
+    color: #3769b2; /* Light Blue icon color on hover */
 }
-.filter-header{
+
+.filter-header {
     display: flex;
     align-items: center;
     margin: 1rem;
-    gap : 1rem;
+    gap: 1rem;
+    color: #35b4ff; /* Text Light Blue header text color */
 }
-.filter-header-icon{
+
+.filter-header-icon {
     margin-bottom: 5px;
+    color: #35b4ff; /* Text Light Blue header icon color */
 }
-.price-slider{
+
+.filter-bgbox {
+    color: #011a01;
+}
+
+.price-slider {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin: 1rem;
+    color: #35b4ff; /* Text Light Blue slider text color */
 }
-.price-range{
+
+.filter-price {
+    color:#023d80;
+}
+
+.price-range {
     align-items: center;
     gap: 1rem;
     margin: 1rem;
+    color: #35b4ff; /* Text Light Blue range text color */
 }
-.reset-price-btn{
+
+.reset-price-btn {
     align-self: center;
+    color: #001226; /* Dark Blue text color */
+    background-color: #3769b2; /* Light Blue background color */
+    border: 1px solid #3769b2; /* Border matching background color */
+    padding: 5px 10px; /* Added padding for better touch area */
+    border-radius: 5px; /* Slight rounding for a softer look */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.reset-price-btn:hover {
+    background-color: #eab541; /* Golden Yellow background color on hover */
+    color: #001226; /* Dark Blue text color on hover */
 }

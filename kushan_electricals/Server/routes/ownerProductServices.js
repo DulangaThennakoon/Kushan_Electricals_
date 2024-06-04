@@ -11,14 +11,27 @@ const { rename } = require("fs");
 router.get("/getProductData/:productId", (req, res) => {
   const productId = req.params.productId;
   const sql = `
-    SELECT p.*, s.name AS supplierName,sub_category.subCategoryName AS subCategoryName,cat.* FROM product p LEFT JOIN supplier s ON p.supplierID = s.supplierID LEFT JOIN sub_category ON sub_category.subCategoryID = p.subCategoryID LEFT JOIN category cat ON cat.categoryID = sub_category.categoryID WHERE p.productID = ?;
-      `;
+  SELECT 
+  p.*, 
+  sub_category.subCategoryName AS subCategoryName, 
+  cat.* 
+FROM 
+  product p 
+LEFT JOIN 
+  sub_category ON sub_category.subCategoryID = p.subCategoryID 
+LEFT JOIN 
+  category cat ON cat.categoryID = sub_category.categoryID 
+WHERE 
+  p.productID = ?;
+`;
+    
 
   db.query(sql, [productId], (err, result) => {
     if (err) {
       res.status(500).json({ message: "Server error occurred" });
     } else {
       res.json(result);
+     
     }
   });
 });

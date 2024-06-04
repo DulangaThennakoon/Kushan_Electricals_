@@ -115,10 +115,10 @@ function Navbar({ onSearch,setIsAuthenticated  }) {
             <li
               onClick={() => {
                 setMenu("household");
-                setSearchTerm("Household Apliances");
+                setSearchTerm("Household Appliances");
               }}
             >
-              Household Apliances {menu === "household" ? <hr /> : null}
+              Household Appliances {menu === "household" ? <hr /> : null}
             </li>
           </Link>
           <Link to={"/"}>

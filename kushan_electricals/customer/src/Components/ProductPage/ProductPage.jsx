@@ -130,7 +130,7 @@ function ProductPage() {
             <p className="attributeLabel">Price: Rs. {product.unitPrice}</p>
           </div>
           <div className="productQuantityDiv">
-            <p className="attributeLabel">Quantity:</p>
+            <p className="attributeLabel">Quantity: </p>
 
             <div
               className="changeQTY"

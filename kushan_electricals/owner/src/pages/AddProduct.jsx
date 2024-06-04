@@ -91,21 +91,21 @@ function AddProduct() {
       });
   }, []);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/owner/supplierServices/getSuppliers")
-      .then((res) => {
-        setSelectedSupplierID(res.data[0].supplierID);
-        setSuppliers(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.error("Error fetching suppliers", {
-          position: "top-right",
-          autoClose: 2000,
-        });
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:5000/api/owner/supplierServices/getSuppliers")
+  //     .then((res) => {
+  //       setSelectedSupplierID(res.data[0].supplierID);
+  //       setSuppliers(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       toast.error("Error fetching suppliers", {
+  //         position: "top-right",
+  //         autoClose: 2000,
+  //       });
+  //     });
+  // }, []);
 
   useEffect(() => {
     getBarcodes().then((res) => {
@@ -587,7 +587,7 @@ function AddProduct() {
                         </MDBCol>
                       </MDBRow>
                       <MDBRow style={{ marginBottom: "1rem" }}>
-                        {/* <MDBCol md="6">
+                        <MDBCol md="6">
                           <Form.Label>Supplier</Form.Label>
                           <Form.Control
                             id="inputSupplier"
@@ -595,7 +595,7 @@ function AddProduct() {
                             placeholder="Supplier name"
                           />
                           <Form.Text className="text-muted"></Form.Text>
-                          </MDBCol> */}
+                          </MDBCol>
                         <MDBCol md="6">
                           <Form.Label htmlFor="disabledSelect">
                             Supplier
@@ -605,7 +605,7 @@ function AddProduct() {
                             onChange={handleSupplierChange}
                             value={selectedSupplierID}
                           >
-                            {suppliers.map((supplier) => (
+                            {suppliers?.map((supplier) => (
                               <option
                                 key={supplier.supplierID}
                                 value={supplier.supplierID}

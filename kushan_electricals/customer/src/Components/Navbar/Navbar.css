@@ -1,71 +1,74 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-around;
     padding: 16px;
-    box-shadow: 0 1px 3px -2px black;
-    background-color: rgba(0, 0, 0, 0.838);
+    box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.5);
+    background-color: #001226;
     padding: 0 2rem 0 2rem !important;
 }
 
-.navbar_logo{
+.navbar_logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.navbar_logo p{
-    color: #171717;
+.navbar_logo p {
+    color: #35b4ff;
     font-size: 18px;
     font-weight: 600;
-    color: white;
 }
-.navbar_menu{
+
+.navbar_menu {
     display: flex;
     gap: 50px;
     list-style-type: none;
     align-items: center;
-
 }
-.navbar_menu li{
+
+.navbar_menu li {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 3px;
     cursor: pointer;
+    color: #ffffff;
 }
 
-.navbar_menu hr{
-
+.navbar_menu hr {
     border: none;
     width: 80%;
-    background:#ff0000	;
+    background: #eab541;
     height: 3px;
     border-radius: 10px;
     opacity: 1;
 }
-.navbar_login_cart{
+
+.navbar_login_cart {
     display: flex;
     gap: 45px;
     align-items: center;
 }
-.navbar_login_cart button{
+
+.navbar_login_cart button {
     padding: 10px 20px;
     border: none;
     border-radius: 25px;
-    color: #ff0000;
-    border: 1px solid #ff0000;
-    background: white;
+    color: #001226;
+    border: 1px solid #eab541;
+    background: #eab541;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
 }
 
-.navbar_login_cart button:active{
-    background: #ff0000;
-    color: white;
+.navbar_login_cart button:active {
+    background: #3769b2;
+    color: #ffffff;
 }
-.navbar_cart_count{
+
+.navbar_cart_count {
     width: 22px;
     height: 22px;
     display: flex;
@@ -75,34 +78,38 @@
     margin-left: -55px;
     border-radius: 11px;
     font-size: 14px;
-    background-color: #ff0000;
-    color: white;
+    background-color: #eab541;
+    color: #001226;
 }
+
 .searchInput {
     padding: 5px; /* Adjust padding to match the button */
     border-radius: 32px !important;
-    border: 1px solid #363535;
-    background: white;
+    border: 1px solid #35b4ff;
+    background: #ffffff;
     cursor: pointer;
     height: auto; /* Allow height to adjust based on content */
     font-size: 16px; /* Match font size with the button */
 }
-.searchForm{
+
+.searchForm {
     display: flex;
     flex-direction: row!important;
     gap: 10px;
     padding: 20px;
     height: 3rem;
 }
-.searchButton{
+
+.searchButton {
     border: none;
     border-radius: 25px;
-    background: white;
+    background: #ffffff;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
 }
-.userAccount{
+
+.userAccount {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,20 +117,23 @@
     border-radius: 10px;
     cursor: pointer;
     padding: 5px;
+    color: #35b4ff;
 }
-.userAccount:hover{
-    box-shadow: 0 2px 3px -2px black;
+
+.userAccount:hover {
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.5);
 }
+
 /* Styles for PC */
 @media screen and (min-width: 768px) {
     .navbar {
         /* PC-specific styles */
     }
-    .mobileDropdown{
+    .mobileDropdown {
         display: none;
     }
-    ul li{
-        color: white;
+    ul li {
+        color: #ffffff;
     }
 }
 
@@ -132,30 +142,30 @@
     .navbar {
         /* Smaller device-specific styles */
     }
-    .greeting{
+    .greeting {
         display: none;
     }
-    .mobileDropdown{
+    .mobileDropdown {
         display: flex;
         gap: 10px;
         position: absolute;
         margin-left: 50%;
         padding: 1rem;
     }
-    .navbar_logo{
+    .navbar_logo {
         margin-left: auto;
         margin-right: auto;
     }
-    .searchForm{
+    .searchForm {
         width: 100%;
     }
-    .searchInput{
+    .searchInput {
         width: 100%;
     }
-    .navbar_search{
+    .navbar_search {
         width: 100%;
     }
-    .navbar_login_cart{
+    .navbar_login_cart {
         display: none;
     }
 }
