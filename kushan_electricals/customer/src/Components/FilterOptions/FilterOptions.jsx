@@ -63,7 +63,7 @@ export default function FilterOptions({ minPrice, setMinPrice, maxPrice, setMaxP
           <ListItemIcon>
             <IoIosPricetag />
           </ListItemIcon>
-          <ListItemText primary="Price" />
+          <ListItemText primary="Price" className="filter-price" />
         </ListItem>
         <ListItem disablePadding>
           <div className="price-range">
@@ -90,7 +90,7 @@ export default function FilterOptions({ minPrice, setMinPrice, maxPrice, setMaxP
       <Divider />
       <List>
         {categories.map((item) => (
-          <ListItem key={item.id} disablePadding onClick={setSearch(item.name)}>
+          <ListItem key={item.id} disablePadding onClick={setSearch(item.name)}   className="filter-bgbox">
             <ListItemButton>
               <ListItemIcon>
                 <FaDotCircle />

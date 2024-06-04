@@ -98,16 +98,16 @@ function EditProduct() {
       });
   }, [productId]);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/owner/supplierServices/getSuppliers")
-      .then((res) => {
-        setSuppliers(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:5000/api/owner/supplierServices/getSuppliers")
+  //     .then((res) => {
+  //       setSuppliers(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
   const handleCategoryChange = (event) => {
     setSelectedCategoryID(event.target.value);
@@ -583,7 +583,7 @@ function EditProduct() {
                           <Form.Text className="text-muted"></Form.Text>
                         </MDBCol>
 
-                        <MDBCol md="6">
+                        {/* <MDBCol md="6">
                           <Form.Label htmlFor="disabledSelect">
                             Supplier
                           </Form.Label>
@@ -591,19 +591,19 @@ function EditProduct() {
                             id="inputSupplier"
                             onChange={handleSupplierChange}
                             value={selectedSupplierID}
-                          >
+                          > */}
                             {/* Default option with the selected supplier */}
-                            <option disabled>
+                            {/* <option disabled>
                               {supplier}
                               {console.log(
                                 "Supplier data",
                                 selectedSupplierID,
                                 supplier
                               )}
-                            </option>
+                            </option> */}
 
                             {/* Iterate over suppliers and render options */}
-                            {suppliers.map((supplier) => (
+                            {/* {suppliers?.map((supplier) => (
                               <option
                                 key={supplier.supplierID}
                                 value={supplier.supplierID}
@@ -611,8 +611,8 @@ function EditProduct() {
                                 {supplier.name}
                               </option>
                             ))}
-                          </Form.Select>
-                        </MDBCol>
+                        //   </Form.Select> */}
+                        {/* // </MDBCol> */}
                       </MDBRow>
 
                       <Form.Label>Product details</Form.Label>

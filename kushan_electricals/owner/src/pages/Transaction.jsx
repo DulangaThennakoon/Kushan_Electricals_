@@ -171,7 +171,6 @@ function Transaction() {
     }
   };
 
-  const quicksearch = ["Soap", "Face Cream", "Face Wash", "Lipstick", "Toys"];
 
   const proceedTransaction = () => {
     console.log("proceeding transaction");

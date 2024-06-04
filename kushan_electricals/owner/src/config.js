@@ -2,14 +2,26 @@
 import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 
+// Your web app's Firebase configuration
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
-  apiKey: "AIzaSyD_hzvfGc94xx5ChZXkPoHb7kn7GnOD3-I",
-  authDomain: "champions-stores.firebaseapp.com",
-  projectId: "champions-stores",
-  storageBucket: "champions-stores.appspot.com",
-  messagingSenderId: "1081683885774",
-  appId: "1:1081683885774:web:f508204a115d4a06005a9f",
-  measurementId: "G-EP6ME9ES0R"
+
+  apiKey: "AIzaSyBA4r8CHSmvtaS2kaMn23gXRKloNJ_mmqk",
+
+  authDomain: "kushan-electricals.firebaseapp.com",
+
+  projectId: "kushan-electricals",
+
+  storageBucket: "kushan-electricals.appspot.com",
+
+  messagingSenderId: "606383824294",
+
+  appId: "1:606383824294:web:94dc105611c8e717c80367",
+
+  measurementId: "G-VKB5238QJE"
+
 };
 
 

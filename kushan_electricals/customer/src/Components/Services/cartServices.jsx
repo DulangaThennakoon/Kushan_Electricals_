@@ -132,6 +132,20 @@ async function CompletePayment(cartID, cardNumber, expiryDate, cvc) {
       },
     }
   );
+  
+  // const response2 = await axios.put(
+  //   cartServiceEndpoint + "updateCurrentStock",
+  //   {
+  //     qty : 10,
+  //     itemID : 1
+  //   },
+  //   {
+  //     headers: {
+  //       "x-access-token": accessToken,
+  //     },
+  //   }
+    
+  // )
   //console.log(response.data);
   return response.data;
 }

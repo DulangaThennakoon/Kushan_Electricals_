@@ -84,9 +84,10 @@ export default function PaymentModal({ cartID , subtotal = 0, deliveryCharge = 0
       state.cvc
       );
       if (response.status === 200) {
+
       toast.success(response.message);
       setTimeout(() => {
-        window.location.href = "/";
+       window.location.href = "/";
       }, 2000);
       } else {
       toast.error(response.message);

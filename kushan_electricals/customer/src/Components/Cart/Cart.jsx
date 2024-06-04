@@ -90,7 +90,9 @@ function Cart() {
 
   const changeQuantityInDb = async (id, quantity) => {
     try {
+      console.log(quantity,"Quantity ")
       const response = await changeCartItemQuantity(id, quantity);
+      console.log("asdasdadqwe d asd asd asd ",response)
       if (response && response.status === 200) {
         getCartDetails();
       } else {

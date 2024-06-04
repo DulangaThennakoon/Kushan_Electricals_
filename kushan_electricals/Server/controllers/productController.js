@@ -19,7 +19,7 @@ const db = mysql.createConnection({
 });
 
 const getItemList = (req, res) => {
-    const sql = 'SELECT * from product where status = 0';
+    const sql = 'SELECT * from product where status = 1';
     db.query(sql, (err, result) => {
         if (err) res.json({ message: 'Server error occurred' });
         console.log(res)

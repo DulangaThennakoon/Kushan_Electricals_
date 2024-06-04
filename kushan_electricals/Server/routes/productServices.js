@@ -42,7 +42,7 @@ router.get("/getProducts", (req, res) => {
             FROM product p
             INNER JOIN sub_category s_c ON p.subCategoryID = s_c.subCategoryID
             INNER JOIN category c ON s_c.categoryID = c.categoryID
-            WHERE p.status = 0;
+            WHERE p.status =1;
         END`;
 
       db.query(createProcedureQuery, (err) => {
