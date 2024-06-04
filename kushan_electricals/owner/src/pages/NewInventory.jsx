@@ -69,7 +69,7 @@ function NewInventory() {
             productId: productId,
             stock: stock,
             buyingPrice: buyingPrice,
-            supplierId: product.supplierID,
+            // supplierId: product.supplierID,
           },
           {
             headers: {
@@ -192,7 +192,7 @@ function NewInventory() {
                             disabled
                           />
                         </MDBCol>
-                        <MDBCol md="6">
+                        {/* <MDBCol md="6">
                           <Form.Label>Supplier</Form.Label>
                           <Form.Control
                             type="text"
@@ -200,7 +200,7 @@ function NewInventory() {
                             value={product.supplierName}
                             disabled
                           />
-                        </MDBCol>
+                        </MDBCol> */}
                       </MDBRow>
 
                       <MDBRow style={{ marginBottom: "1rem" }}>
@@ -215,7 +215,7 @@ function NewInventory() {
                           />
                         </MDBCol>
 
-                        <MDBCol md="6">
+                        {/* <MDBCol md="6">
                           <Form.Label>Buying price</Form.Label>
                           <Form.Control
                             id="inputBuyingPrice"
@@ -224,7 +224,7 @@ function NewInventory() {
                             value={buyingPrice}
                             onChange={(e) => setBuyingPrice(e.target.value)}
                           />
-                        </MDBCol>
+                        </MDBCol> */}
                       </MDBRow>
 
                       <div className="d-flex justify-content-end pt-3">

@@ -9,6 +9,10 @@
     padding: 10px 20px ;
 }
 
+.newtransaction {
+    background-color: #6194ce;
+}
+
 .container .box {
     width: 12%;
     height: 250px;
@@ -17,6 +21,10 @@
     background: #e8e8e8;
     padding: 0 1% 1% 1%;
     border-radius: 10px;
+}
+
+.proceed_button {
+    background-color: #001226;
 }
 
 .container .box .contant {
@@ -98,3 +106,4 @@
     padding: 1rem;
     display: flex;
 }
+
