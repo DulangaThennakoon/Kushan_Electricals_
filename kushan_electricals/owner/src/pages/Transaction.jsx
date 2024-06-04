@@ -171,6 +171,7 @@ function Transaction() {
     }
   };
 
+   const quicksearch = ["Bulb", "Wire", "Electric", "Light"];
 
   const proceedTransaction = () => {
     console.log("proceeding transaction");
