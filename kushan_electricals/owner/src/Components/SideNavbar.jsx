@@ -25,7 +25,7 @@ function SideNavbar({ selected }) {
       }}
     >
       <div
-        className={`h-screen bg-black position-relative`}
+        className={`h-screen ${open ? 'bg-sidebar-open' : 'bg-sidebar-closed'} position-relative`}
         style={{
           height: "100%",
           width: open ? "60%" : "20%",
@@ -36,16 +36,7 @@ function SideNavbar({ selected }) {
           justifyContent: "left",
         }}
       >
-        {/* {open && (
-          <img
-            src={require("../assets/logo.png")}
-            alt="profile"
-            style={{ width: "auto", height: "10%", display: "flex" }}
-          />
-        )} */}
-        <div
-          style={{ height:'15%' }}
-        ></div>
+        <div style={{ height: '15%' }}></div>
 
         <div
           style={{
@@ -70,12 +61,6 @@ function SideNavbar({ selected }) {
           />
         </div>
 
-        {open ? (
-          <i className="bi bi-chevron-left"></i>
-        ) : (
-          <i className="bi bi-chevron-right"></i>
-        )}
-
         <br />
         <ul
           className="pt-6"
@@ -87,10 +72,7 @@ function SideNavbar({ selected }) {
         >
           <Link to="/transaction" className="text-decoration-none text-white">
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2  rounded-md mt-2"
-              style={{
-                backgroundColor: selected === "Transaction" ? "#474747" : "",
-              }}
+              className={`text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 rounded-md mt-2 ${selected === "Transaction" ? "bg-active" : ""}`}
             >
               <img
                 src={require("../assets/credit-card-machine.png")}
@@ -103,10 +85,7 @@ function SideNavbar({ selected }) {
           </Link>
           <Link to="/orders" className="text-decoration-none text-white">
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2  rounded-md mt-2"
-              style={{
-                backgroundColor: selected === "Orders" ? "#474747" : "",
-              }}
+              className={`text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 rounded-md mt-2 ${selected === "Orders" ? "bg-active" : ""}`}
             >
               <img
                 src={require("../assets/logistics.png")}
@@ -119,10 +98,7 @@ function SideNavbar({ selected }) {
           </Link>
           <Link to="/inventory" className="text-decoration-none text-white">
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2  rounded-md mt-2"
-              style={{
-                backgroundColor: selected === "Inventory" ? "#474747" : "",
-              }}
+              className={`text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 rounded-md mt-2 ${selected === "Inventory" ? "bg-active" : ""}`}
             >
               <img
                 src={require("../assets/checklists.png")}
@@ -135,10 +111,7 @@ function SideNavbar({ selected }) {
           </Link>
           <Link to="/lowstock" className="text-decoration-none text-white">
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2  rounded-md mt-2"
-              style={{
-                backgroundColor: selected === "Low Stocks" ? "#474747" : "",
-              }}
+              className={`text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 rounded-md mt-2 ${selected === "Low Stocks" ? "bg-active" : ""}`}
             >
               <img
                 src={require("../assets/delivery-cancelled.png")}
@@ -151,10 +124,7 @@ function SideNavbar({ selected }) {
           </Link>
           <Link to="/reports" className="text-decoration-none text-white">
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2  rounded-md mt-2"
-              style={{
-                backgroundColor: selected === "Reports" ? "#474747" : "",
-              }}
+              className={`text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 rounded-md mt-2 ${selected === "Reports" ? "bg-active" : ""}`}
             >
               <img
                 src={require("../assets/report.png")}
@@ -167,11 +137,7 @@ function SideNavbar({ selected }) {
           </Link>
           <Link to="/productreturn" className="text-decoration-none text-white">
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2  rounded-md mt-2"
-              style={{
-                backgroundColor:
-                  selected === "Product Returns" ? "#474747" : "",
-              }}
+              className={`text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 rounded-md mt-2 ${selected === "Product Returns" ? "bg-active" : ""}`}
             >
               <img
                 src={require("../assets/return.png")}
@@ -187,7 +153,7 @@ function SideNavbar({ selected }) {
           <li></li>
 
           <li
-            className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2  rounded-md mt-2"
+            className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 rounded-md mt-2"
             onClick={handleLogout}
           >
             <img
@@ -203,11 +169,7 @@ function SideNavbar({ selected }) {
             className="text-decoration-none text-white"
           >
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2  rounded-md mt-2"
-              style={{
-                backgroundColor:
-                  selected === "AccountSettings" ? "#474747" : "",
-              }}
+              className={`text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 rounded-md mt-2 ${selected === "AccountSettings" ? "bg-active" : ""}`}
             >
               <img
                 src={require("../assets/user.png")}

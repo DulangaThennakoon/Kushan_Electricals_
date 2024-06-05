@@ -587,7 +587,7 @@ function AddProduct() {
                         </MDBCol>
                       </MDBRow>
                       <MDBRow style={{ marginBottom: "1rem" }}>
-                        <MDBCol md="6">
+                        {/* <MDBCol md="6">
                           <Form.Label>Supplier</Form.Label>
                           <Form.Control
                             id="inputSupplier"
@@ -595,8 +595,8 @@ function AddProduct() {
                             placeholder="Supplier name"
                           />
                           <Form.Text className="text-muted"></Form.Text>
-                          </MDBCol>
-                        <MDBCol md="6">
+                          </MDBCol> */}
+                        {/* <MDBCol md="6">
                           <Form.Label htmlFor="disabledSelect">
                             Supplier
                           </Form.Label>
@@ -614,8 +614,8 @@ function AddProduct() {
                               </option>
                             ))}
                           </Form.Select>
-                        </MDBCol>
-                        <MDBCol md="6">
+                        </MDBCol> */}
+                        {/* <MDBCol md="6">
                           <Form.Label htmlFor="disabledSelect">
                             Barcode
                           </Form.Label>
@@ -662,7 +662,7 @@ function AddProduct() {
                               </InputGroup.Text>
                             )}
                           </InputGroup>
-                        </MDBCol>
+                        </MDBCol> */}
                       </MDBRow>
 
                       <Form.Label>Product details</Form.Label>

@@ -1,0 +1,30 @@
+/* Navbar styles */
+.navbar {
+    background-color: #001226; /* Dark Blue */
+    height: 3.8rem;
+    display: flex;
+    align-items: center;
+    z-index: 900;
+}
+
+/* Logo styles */
+.navbar img {
+    width: 9rem;
+    height: auto;
+    margin-left: -50px;
+    z-index: 700;
+    margin-top: -1.75rem;
+}
+
+/* Text styles */
+.text {
+    display: flex;
+    align-items: baseline;
+    color: #35b4ff; /* Text Light Blue */
+    margin-right: 4rem;
+    margin-top: 1rem;
+}
+
+.text h4 {
+    margin-right: 0.5rem;
+}

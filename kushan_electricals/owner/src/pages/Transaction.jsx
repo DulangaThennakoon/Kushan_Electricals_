@@ -357,7 +357,7 @@ function Transaction() {
                   size="lg"
                   style={{ backgroundColor: "grey", margin: "1rem",paddingTop:'0.15rem',paddingBottom:'0.15rem' }}
                   onClick={clearList}
-                >
+                  className="newtransaction">
                   New Transaction
                 </Button>
               </div>
@@ -425,9 +425,9 @@ function Transaction() {
                 <Boot_Card.Body>
                   <Boot_Card.Text>
                     <div style={{ display: "flex" }}>
-                      <div className="barCode" style={{marginRight:'3rem',width:'5rem'}}>
+                      {/* <div className="barCode" style={{marginRight:'3rem',width:'5rem'}}>
                         <Button onClick={barcodeReader} variant={isScanning?"dark":"outline-dark"} style={{fontSize:'16px'}}>{isScanning?'Scanning':"Scan Barcode"}</Button>
-                      </div>
+                      </div> */}
                       <h3>Total</h3>
                       <div
                       className="totalPriceBox"
@@ -457,7 +457,7 @@ function Transaction() {
                       variant="dark"
                       style={{ width: "45%", margin: "0.5rem" }}
                       onClick={handleProceed}
-                    >
+                    className="proceed_button">
                       Proceed
                     </Boot_Button>
                   </div>
