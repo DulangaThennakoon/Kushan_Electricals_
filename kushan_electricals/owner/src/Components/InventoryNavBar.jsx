@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-import { BsFillCaretRightFill } from "react-icons/bs";
-import { BiSolidCategoryAlt } from "react-icons/bi";
-import { CiSquarePlus } from "react-icons/ci";
-import { LiaUserCircle } from "react-icons/lia";
-import { CiSquareRemove } from "react-icons/ci";
-import { VscHistory } from "react-icons/vsc";
-import { PiTreeStructureLight } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import { PiTreeStructureLight } from "react-icons/pi";
+import { CiSquarePlus } from "react-icons/ci";
 import "./InventoryNavBar.css";
 
 function SideNavbar({ selected }) {
@@ -26,7 +21,9 @@ function SideNavbar({ selected }) {
       }}
     >
       <div
-        className={`h-screen bg-black position-relative`}
+        className={`h-screen position-relative ${
+          open ? "bg-sidebar-open" : "bg-sidebar-closed"
+        }`}
         style={{
           display: "flex",
           width: "100%",
@@ -40,6 +37,7 @@ function SideNavbar({ selected }) {
             top: "5rem",
             position: "absolute",
             marginLeft: open ? "15px" : "-15px",
+            cursor: "pointer",
           }}
         >
           <IoIosArrowDropleftCircle
@@ -50,35 +48,31 @@ function SideNavbar({ selected }) {
               zIndex: 1000,
               backgroundColor: "#474747",
               transform: open ? "rotate(180deg)" : "none",
-              cursor: "pointer",
             }}
             onClick={() => setOpen(!open)}
           />
         </div>
 
-        <br />
         <ul
           className="d-flex flex-column justify-content-center"
           id="optionList"
+          style={{
+            marginTop: "5rem",
+          }}
         >
           <Link to="/altercategories">
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 hover-bg-light rounded-md mt-2 "
+              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 hover-bg-light rounded-md mt-2"
               style={{
                 paddingTop: "1rem",
                 cursor: "pointer",
                 marginLeft: "-1rem",
-                backgroundColor:
-                  selected === "altercategories" ? "#474747" : "",
+                backgroundColor: selected === "altercategories" ? "#474747" : "",
               }}
             >
-              <PiTreeStructureLight
-                className="w-12 h-12"
-                style={{ fontSize: "36px" }}
-              />
-              &nbsp;&nbsp;
+              <PiTreeStructureLight className="icon-style" />
               {open && (
-                <span>
+                <span className="icon-description">
                   Alter
                   <br />
                   Category
@@ -88,7 +82,7 @@ function SideNavbar({ selected }) {
           </Link>
           <Link to="/addProduct">
             <li
-              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 hover-bg-light rounded-md mt-2 "
+              className="text-white text-sm d-flex align-items-center gap-2 cursor-pointer p-2 hover-bg-light rounded-md mt-2"
               style={{
                 paddingTop: "1rem",
                 cursor: "pointer",
@@ -96,13 +90,9 @@ function SideNavbar({ selected }) {
                 backgroundColor: selected === "addProduct" ? "#474747" : "",
               }}
             >
-              <CiSquarePlus
-                className="w-12 h-12"
-                style={{ fontSize: "36px" }}
-              />
-              &nbsp;&nbsp;
+              <CiSquarePlus className="icon-style" />
               {open && (
-                <span>
+                <span className="icon-description">
                   New
                   <br />
                   Product
@@ -112,7 +102,6 @@ function SideNavbar({ selected }) {
           </Link>
         </ul>
       </div>
-      <div className=""></div>
     </div>
   );
 }
