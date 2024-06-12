@@ -115,7 +115,7 @@ async function removeCartItem(cartItemId) {
   return response.data;
 }
 
-async function CompletePayment(cartID, cardNumber, expiryDate, cvc) {
+async function CompletePayment(cartID, cardNumber, expiryDate, cvc,cartItems) {
   const accessToken = localStorage.getItem("accessToken");
   console.log(cartID, cardNumber, expiryDate, cvc);
   const response = await axios.post(
@@ -132,21 +132,20 @@ async function CompletePayment(cartID, cardNumber, expiryDate, cvc) {
       },
     }
   );
-  
-  // const response2 = await axios.put(
-  //   cartServiceEndpoint + "updateCurrentStock",
-  //   {
-  //     qty : 10,
-  //     itemID : 1
-  //   },
-  //   {
-  //     headers: {
-  //       "x-access-token": accessToken,
-  //     },
-  //   }
-    
-  // )
-  //console.log(response.data);
+  console.log("cart Items",cartItems)
+
+  const response2 = await axios.put(
+    cartServiceEndpoint + "updateCurrentStock",
+    {
+      cartItems
+    },
+    {
+      headers: {
+        "x-access-token": accessToken,
+      },
+    }
+  )
+  console.log(response.data);
   return response.data;
 }
 

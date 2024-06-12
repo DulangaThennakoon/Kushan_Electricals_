@@ -10,6 +10,7 @@ const cookieParser = require("cookie-parser");
 router.use(cookieParser());
 const { validateToken } = require("../JWT");
 const { verify } = require("crypto");
+const { count } = require("console");
 
 router.post("/addToCart", validateToken, (req, res) => {
   const customerID = req.customerID;
@@ -123,6 +124,33 @@ router.put("/changeCartItemQuantity", validateToken, (req, res) => {
     });
 });
 
+
+router.put("/updateCurrentStock", validateToken, async (req, res) => {
+  const { cartItems } = req.body;
+  const sql = 'UPDATE product SET currentStock = currentStock - ? WHERE productID = ?';
+
+  try {
+    const updatePromises = cartItems.map(item => {
+      return new Promise((resolve, reject) => {
+        db.query(sql, [item.quantity, item.productID], (err, result) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(result);
+          }
+        });
+      });
+    });
+
+    await Promise.all(updatePromises);
+
+    res.status(200).json({ status: 200, message: "Updated" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ status: 500, message: "Internal server error" });
+  }
+});
+
 router.delete("/removeCartItem",validateToken, (req, res) => {
   console.log("removeCartItem");
   const { cartItemID } = req.body;
@@ -136,6 +164,22 @@ router.delete("/removeCartItem",validateToken, (req, res) => {
     }
   });  
 });
+router.get("/getCartItem",validateToken,(req,res)=>{
+  console.log("getcartITem");
+  const customerID = req.customerID;
+  console.log("+++++++++",customerID)
+  const sql  = "SELECT count(productID) as count from cart_item WHERE cartID = (SELECT cartID FROM cart WHERE customerID = ? AND paymentStatus = 0)"
+  
+  db.query(sql, customerID, (err, result) => {
+    if(err){
+      console.log(err);
+      res.status(500).json({ status:500, message: "Internal server error" });
+    }else{
+      res.status(200).json({ status:200, message: "Item removed from cart",count:result });
+    }
+  });  
+  })
+  
 
 router.post("/checkout", validateToken, (req, res) => {
   const customerID = req.customerID;

@@ -196,7 +196,7 @@ function Cart() {
                 <MDBCardBody className="cardBody">
                   <div className="itemName">{item.productName}</div>
                   <div className="itemDataNControls">
-                    <div className="itemPrice">{item.unitPrice} p.p</div>
+                    <div className="itemPrice">{item.unitPrice} .00</div>
                     <div className="itemQuantity">
                       <MDBBtn
                         className="qtyChangeBtn"
@@ -336,6 +336,7 @@ function Cart() {
                             cartID={cartID}
                             subtotal={subTotal}
                             deliveryCharge={deliveryCharge}
+                            cartItems = {cart_Items}
                           />
                         </div>
                       </MDBCol>

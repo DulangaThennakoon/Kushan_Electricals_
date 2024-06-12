@@ -10,6 +10,8 @@ import FormControl from "@mui/material/FormControl";
 import { CiSearch } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
 import { Link,useNavigate } from "react-router-dom";
+import axios from "axios";
+import { cartServiceEndpoint } from "../apiCalls";
 import {
   MDBDropdown,
   MDBDropdownMenu,
@@ -23,7 +25,7 @@ function Navbar({ onSearch,setIsAuthenticated  }) {
   const [menu, setMenu] = useState("home");
   const [searchTerm, setSearchTerm] = useState("");
   const customerName = localStorage.getItem("customerName") || "Customer";
-  const itemCount = localStorage.getItem("itemCount") || 0;
+  const [itemCount,setItemCount] = useState(0);
   const navigate = useNavigate();
 
   const [loggedIn, setLoggedIn] = useState(
@@ -46,6 +48,35 @@ function Navbar({ onSearch,setIsAuthenticated  }) {
     setIsAuthenticated(false);
     navigate("/");
   };
+  useEffect(()=>{
+    const accessToken = localStorage.getItem("accessToken");
+  const customerID = localStorage.getItem("customerID");
+    async function fetchCartItem(customerID, accessToken) {
+      try {
+        const res = await axios.get(cartServiceEndpoint + "getCartItem", {
+          params: { customerID: customerID },
+          headers: {
+            "x-access-token": accessToken,
+          },
+        });
+    
+        // Log the entire response object to see its structure
+        console.log("Full response:", res);
+    
+        // Log the data part of the response which contains your desired data
+        setItemCount(res?.data?.count[0]?.count);
+        
+      } catch (error) {
+        console.error("Error fetching cart items:", error);
+      }
+    }
+    
+    // Call the function with appropriate arguments
+    fetchCartItem(customerID, accessToken);
+    
+  },[])
+  
+
 
   return (
     <div>

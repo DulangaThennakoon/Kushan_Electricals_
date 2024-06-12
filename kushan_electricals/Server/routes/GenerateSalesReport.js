@@ -277,7 +277,7 @@ router.post("/createSalesReport", validateOwnerToken, (req, res) => {
                                           </head>
                                           <body>
                                             <div class="container">
-                                              <img src="https://firebasestorage.googleapis.com/v0/b/kushan-electricals.appspot.com/o/logo.png?alt=media&token=73556b84-feac-467a-8c50-fdbdf44d20ef" alt="Inventory Icon" style="display: block; margin: 0 auto; width: 100px;margin-bottom: -20px;">
+                                              <img src="https://firebasestorage.googleapis.com/v0/b/champions-stores.appspot.com/o/logo.png?alt=media&token=383ecef7-be84-45f7-8244-3cc4824fe717" alt="Inventory Icon" style="display: block; margin: 0 auto; width: 100px;margin-bottom: -20px;">
                                               <h1>Sales Report</h1>
                                           <p id = "date"></p>
                                               <h2>Overview:</h2>
