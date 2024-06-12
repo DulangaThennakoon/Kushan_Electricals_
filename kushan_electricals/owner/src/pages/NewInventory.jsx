@@ -215,7 +215,7 @@ function NewInventory() {
                           />
                         </MDBCol>
 
-                        {/* <MDBCol md="6">
+                         <MDBCol md="6">
                           <Form.Label>Buying price</Form.Label>
                           <Form.Control
                             id="inputBuyingPrice"
@@ -224,7 +224,8 @@ function NewInventory() {
                             value={buyingPrice}
                             onChange={(e) => setBuyingPrice(e.target.value)}
                           />
-                        </MDBCol> */}
+                        </MDBCol> 
+                        
                       </MDBRow>
 
                       <div className="d-flex justify-content-end pt-3">

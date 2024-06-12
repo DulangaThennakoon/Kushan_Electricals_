@@ -31,7 +31,7 @@ import { CompletePayment } from "../Services/cartServices";
 
 var creditCardType = require("credit-card-type");
 
-export default function PaymentModal({ cartID , subtotal = 0, deliveryCharge = 0 }) {
+export default function PaymentModal({ cartID , subtotal = 0, deliveryCharge = 0,cartItems}) {
   const [centredModal, setCentredModal] = useState(false);
   const toggleOpen = () => {
     let currentState = centredModal;
@@ -81,7 +81,7 @@ export default function PaymentModal({ cartID , subtotal = 0, deliveryCharge = 0
       cartID,
       state.number,
       reorderExpiryDate(state.expiry),
-      state.cvc
+      state.cvc, cartItems
       );
       if (response.status === 200) {
 

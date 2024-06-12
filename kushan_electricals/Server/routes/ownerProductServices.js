@@ -306,7 +306,7 @@ router.post("/transaction",validateOwnerToken, (req, res) => {
 });
 
 router.post("/newInventory",validateOwnerToken, (req, res) => {
-  const { productId, stock, buyingPrice, supplierId } = req.body;
+  const { productId, stock, buyingPrice } = req.body;
   // Get the current date
   const currentDate = new Date();
   const year = currentDate.getFullYear();
@@ -326,13 +326,12 @@ router.post("/newInventory",validateOwnerToken, (req, res) => {
       res.status(500).json({ message: "Server error occurred" });
     } else {
       const sql2 =
-        "INSERT INTO `inventory_purchase` (`productID`, `date`, `unitBuyingPrice`, `itemCount`, `supplierID`) VALUES (?, ?, ?, ?, ?)";
+        "INSERT INTO `inventory_purchase` (`productID`, `date`, `unitBuyingPrice`, `itemCount`) VALUES (?, ?, ?, ?)";
       const values2 = [
         productId,
         formattedDate,
         buyingPrice,
         stock,
-        supplierId,
       ];
       db.query(sql2, values2, (err2, result2) => {
         if (err2) {
