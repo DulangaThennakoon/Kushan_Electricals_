@@ -11,6 +11,7 @@ import InventoryNavBar from "../Components/InventoryNavBar";
 import { imgStorage } from "../config";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 import { getBarcodes } from "../Services/productServices";
 
 import {
@@ -53,6 +54,7 @@ function AddProduct() {
   const [barcode, setBarcode] = useState("");
   const [scannedCode, setScannedCode] = useState("");
   const [existingBarcodes, setExistingBarcodes] = useState([]);
+  const navigate = useNavigate();
 
   //Variables to store form data
   const [productName, setProductName] = useState("");
@@ -315,6 +317,8 @@ function AddProduct() {
           autoClose: 2000,
         });
         setShowConfirmation(true);
+        navigate("/inventory");
+
       })
       .catch((err) => {
         // Handle error response
